@@ -1,0 +1,12 @@
+body {
+    background-color: white;
+}
+html, body {
+    height: 100%;
+}
+.container-fluid{
+    padding: 0;
+}
+#main-row{
+    margin: 0;
+}

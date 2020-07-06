@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/image.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid h-100 d-flex flex-column bg-dark">
+        <nav class="navbar navbar-light bg-secondary">
+            <span class="navbar-brand mb-0 h1 text-white">E2 practice task</span>
+        </nav>
+        <div class="row flex-fill" id="main-row">
+            <div class="col-md d-flex justify-content-center align-items-center">
+                <div class="card w-25 bg-secondary">
+                    <div class="card-header bg-secondary">
+                        <h4 class="card-title text-white">Your image:</h4>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <img id="user-image">
+                        <h6 id="access-count">Access count: </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="password-modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Enter password</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="password-form" >
+                        <div class="form-group">
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                </div>
+                              </div>
+                            <input type="hidden" id="imageID" name="imageID">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="enter-button" class="btn btn-primary float-right">Enter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your image is expired!</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="error-button" class="btn btn-primary float-right">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
