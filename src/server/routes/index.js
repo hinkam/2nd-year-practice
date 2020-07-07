@@ -6,15 +6,15 @@ const { apiRouter } = require('./api/index.js');
 const indexRouter = new express.Router();
 
 indexRouter.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../app/html/index.html'));
+    res.sendFile(path.resolve(__dirname, '../../../dist/html/index.html'));
 });
 
 indexRouter.get('/image/:imageID', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../app/html/image.html'));
+    res.sendFile(path.resolve(__dirname, '../../../dist/html/image.html'));
 });
 
 
-indexRouter.use('/static', express.static(path.resolve(__dirname, '../../app')));
+indexRouter.use('/static', express.static(path.resolve(__dirname, '../../../dist')));
 
 indexRouter.use('/api', apiRouter);
 

@@ -10,3 +10,9 @@ html, body {
 #main-row{
     margin: 0;
 }
+#access-count{
+    margin-top: 40px;
+}
+#user-image{
+    max-width: 100%;
+}

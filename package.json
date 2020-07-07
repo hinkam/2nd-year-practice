@@ -4,17 +4,37 @@
   "description": "2nd semester practice task",
   "main": "src/server/index.js",
   "scripts": {
-    "start": "node ./src/server/index.js"
+    "start": "node ./src/server/index.js",
+    "build": "npx webpack"
   },
   "author": "hinkam",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^8.2.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.1.0",
+    "react-dom": "^16.13.1",
     "text2png": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^7.3.1"
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "eslint": "^7.3.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
   }
 }

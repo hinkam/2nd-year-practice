@@ -17,12 +17,16 @@ apiRouter.post('/print', (req, res) => {
 });
 
 apiRouter.post('/image/create', async (req, res) => {
-    const userText = req.body['upload-area']; // TODO: проверка на пустой ввод
-    const imageID = generateID();
-    const imagePw = generatePassword();
-    await saveAsPng(userText, imageID);
-    await database.insertNewToken(imageID, imagePw);
-    res.json({ imageID, imagePw });
+    const userText = req.body['userText'];
+    if (userText !== ''){
+        const imageID = generateID();
+        const imagePw = generatePassword();
+        await saveAsPng(userText, imageID);
+        await database.insertNewToken(imageID, imagePw);
+        res.json({ imageID, imagePw });
+    } else {
+        res.json({imageID: null, imagePw: null});
+    }
 });
 
 apiRouter.get('/image/check', async (req, res) => {
